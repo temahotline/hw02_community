@@ -6,17 +6,17 @@
           {{ group.description }}
         </p>
         <article>
-{% for Post in posts %}
+{% for post in posts %}
           <ul>
             <li>
-              Автор: {{ Post.author.get_full_name }}
+              Автор: {{ post.author.get_full_name }}
             </li>
             <li>
-              Дата публикации: {{ Post.pub_date|date:"d E Y" }}
+              Дата публикации: {{ post.pub_date|date:"d E Y" }}
             </li>
           </ul>
           <p>
-            {{ Post.text }}
+            {{ post.text }}
           </p>
         </article>
         <hr>
