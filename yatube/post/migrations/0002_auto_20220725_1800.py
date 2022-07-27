@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('posts', '0001_initial'),
+        ('post', '0001_initial'),
     ]
 
     operations = [
@@ -21,8 +21,8 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.AddField(
-            model_name='posts',
+            model_name='post',
             name='group',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='posts.Group'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='post.Group'),
         ),
     ]
