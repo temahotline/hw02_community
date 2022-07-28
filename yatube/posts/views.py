@@ -15,8 +15,9 @@ def index(request):
 
 def group_posts(request, slug):
     group = get_object_or_404(Group, slug=slug)
-    #related_name указал, но не очень понял как реализовать
-    posts = Post.objects.filter(group=group).order_by('-pub_date')[:POSTS_COUNT]
+    # related_name указал, но не очень понял как реализовать
+    posts = (Post.objects.filter(group=group)
+             .order_by('-pub_date')[:POSTS_COUNT])
     context = {
         'group': group,
         'posts': posts,
