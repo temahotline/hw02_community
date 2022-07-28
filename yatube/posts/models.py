@@ -19,7 +19,7 @@ class Post(models.Model):
     group = models.ForeignKey(Group,
                               blank=True,
                               null=True,
-                              related_name='group',
+                              related_name='group_post',
                               on_delete=models.SET_NULL
                               )
     author = models.ForeignKey(User,
